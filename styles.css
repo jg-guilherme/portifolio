@@ -1,0 +1,362 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Conteúdo */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.navbar {
+    background-color: #121212; /* Cor de fundo da navbar */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.navbar-toggler {
+    background-color: #7e57c2; /* Cor de fundo do botão */
+    border-color: #7e57c2; /* Cor da borda do botão */
+    transition: background-color 0.3s ease; /* Animação de transição */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%2878, 57, 194, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    transition: transform 0.3s ease; /* Animação de transição */
+}
+
+.navbar-toggler.collapsed .navbar-toggler-icon {
+    transform: rotate(0deg); /* Ícone padrão */
+}
+
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon {
+    transform: rotate(90deg); /* Ícone rotacionado quando expandido */
+}
+
+/* Animação para o menu */
+.collapse {
+    transition: height 0.3s ease;
+    overflow: hidden; /* Garantir que o conteúdo não transborde */
+}
+
+@font-face {
+    font-family: 'Quicksand_Bold';
+    src: url('Quicksand_Bold.otf') format('opentype');
+}
+
+.navbar .navbar-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar .navbar-nav .nav-link {
+    justify-content: center;
+    font-family: 'Quicksand_Bold', sans-serif;
+    color: #ffffff !important;
+    cursor: pointer;
+    background-image: linear-gradient(to right, #7e57c2 0%, #7e57c2 100%);
+    background-position: 50% 100%;
+    background-size: 0% 2px; /* Diminuir a altura da linha */
+    background-repeat: no-repeat;
+    transition: background-size 0.3s, background-position 0.3s; /* Animação suave */
+}
+
+.navbar .navbar-nav .nav-link:hover {
+    color: #979797cc !important;
+    background-size: 60% 3px; /* Aumentar a largura da linha ao passar o mouse */
+    background-position: 50% 100%;
+}
+
+.navbar .navbar-nav .nav-link i {
+    color: #ffffff !important; /* Cor dos ícones de fonte */
+}
+
+.navbar .navbar-nav .nav-link svg {
+    color: #ffffff !important; /* Cor dos ícones SVG */
+}
+
+.navbar .navbar-nav .nav-link img {
+    filter: brightness(0) invert(1); /* Ajusta a cor das imagens */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+h3 {
+    font-size: 1.2em;
+    color: #bdbdbd;
+}
+
+h4 {
+    font-size: 1em;
+    color: #bdbdbd;
+}
+
+p {
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.sobre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    margin-top: 100px;
+}
+
+.sobre h1 {
+    font-family: 'Peace Sans', sans-serif;
+    font-weight: 900;
+    letter-spacing: -6px;
+    font-size: 5em;
+    text-align: center;
+    margin: 0;
+}
+
+.sobre p {
+    font-weight: bold;
+    margin-bottom: 12px;
+    line-height: 1.2;
+    max-width: 90%;
+}
+
+.sobre #tec {
+    margin: 20px 0;
+}
+
+.sobre a {
+    margin-top: 20px;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.skills span {
+    font-size: 1em;
+    color: #ffffff;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+}
+
+.section {
+    margin-bottom: 50px;
+}
+
+.section-title {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.section-title span {
+    color: #7e57c2;
+}
+
+.experiences, .projects {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.experience, .project {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.experience-info, .project-info {
+    flex-grow: 1;
+}
+
+.experience-title, .project-title {
+    font-size: 1.5em;
+    color: #ffffff;
+}
+
+.company, .tech-stack {
+    font-size: 1em;
+    color: #7e57c2;
+}
+
+.duration {
+    font-size: 1em;
+    color: #bdbdbd;
+}
+
+.project-link {
+    color: #7e57c2;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-link:hover {
+    background-position: left bottom;
+    transition: background-position 1s;
+    text-decoration: underline;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.sobre img {
+    margin: 10px;
+    transition: transform 0.3s;
+    width: 40px;
+}
+
+.sobre img:hover {
+    transform: scale(1.1);
+}
+
+.footer a {
+    color: #7e57c2;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 2s ease-in;
+}
+
+@media (max-width: 992px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar-nav .nav-item {
+        margin-bottom: 10px;
+    }
+
+    .container h2 {
+        font-size: 2em;
+    }
+
+    .title-section h1 {
+        font-size: 3em;
+    }
+
+    .title-section p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    .sobre {
+        margin-top: 50px;
+    }
+
+    .skills {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .container h2 {
+        font-size: 1.5em;
+    }
+
+    .title-section h1 {
+        font-size: 2em;
+    }
+
+    .title-section p {
+        font-size: 0.8em;
+    }
+
+    .title-section .skills {
+        font-size: 0.9em;
+    }
+
+    footer {
+        padding: 15px;
+    }
+
+    .skills span {
+        font-size: 0.8em;
+    }
+
+    .icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .sobre h1 {
+        font-size: 3em;
+    }
+
+    .sobre p {
+        font-size: 0.9em;
+    }
+}
